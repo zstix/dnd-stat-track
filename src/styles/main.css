@@ -47,3 +47,12 @@ body, html {
 .character .init {
   font-size: 20px;
 }
+
+.controls {
+  padding: 20px;
+  text-align: center;
+}
+
+.controls button {
+  margin: 0 10px;
+}

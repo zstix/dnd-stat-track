@@ -3,13 +3,14 @@ import { h, app } from 'hyperapp';
 import './styles/main.css';
 
 import state from './state';
-const actions = {};
+import actions from './actions';
 
 import List from './components/List';
+import Controls from './components/Controls';
 
 const view = (state, actions) => (
   <div>
-    <div>Actions go here</div>
+    <Controls {...actions} />
     <List {...state} />
     <div>Form Goes Here</div>
   </div>
