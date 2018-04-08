@@ -1,6 +1,6 @@
 import { h } from 'hyperapp';
 
-export default ({ create }) => (
+export default ({ create, toggle}) => (
   <div class="form">
     <input type="text" class="name" placeholder="Character Name" />
     <input type="text" class="player" placeholder="Player Name" />
@@ -12,5 +12,6 @@ export default ({ create }) => (
     <input type="number" class="initiative" placeholder="Initiative" />
     <br />
     <button onclick={create}>Create</button>
+    <button onclick={toggle}>Cancel</button>
   </div>
 );

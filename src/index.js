@@ -12,7 +12,7 @@ import Form from './components/Form';
 const view = (state, actions) => (
   <div>
     <Controls {...actions} showForm={state.showForm} />
-    {state.showForm && <Form create={actions.create} />}
+    {state.showForm && <Form {...actions} />}
     <List {...state} update={actions.update} />
   </div>
 );
