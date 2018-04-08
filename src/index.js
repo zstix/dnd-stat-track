@@ -1,17 +1,17 @@
 import { h, app } from 'hyperapp';
 
-import state from './state';
+import './styles/main.css';
 
+import state from './state';
 const actions = {};
+
+import List from './components/List';
 
 const view = (state, actions) => (
   <div>
-    {state.characters.map(char => (
-      <div>
-        <b>{char.name}</b><br />
-        <em>{char.race} {char.class}</em>
-      </div>
-    ))}
+    <div>Actions go here</div>
+    <List {...state} />
+    <div>Form Goes Here</div>
   </div>
 );
 
