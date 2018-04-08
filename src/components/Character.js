@@ -1,35 +1,24 @@
 import { h } from 'hyperapp';
 
-export default ({
-  active,
-  armorClass,
-  characterClass,
-  color,
-  healthPoints,
-  initiative,
-  name,
-  player,
-  race
-}) => (
-  <div class={'character ' + (active && 'active')}>
+import Stat from './Stat';
 
-    <div class="info" style={{ 'background-color': color}}>
-      <h2>{name}</h2>
-      <div>{player}</div>
-      <div>{race} - {characterClass}</div>
+export default (props) => (
+  <div class={'character ' + (props.active && 'active')}>
+
+    <div class="info" style={{ 'background-color': props.color}}>
+      <h2>{props.name}</h2>
+      <div>{props.player}</div>
+      <div>{props.race} - {props.characterClass}</div>
     </div>
 
-    <div class="armor">
-      {armorClass}
-    </div>
-
-    <div class="health">
-      {healthPoints}
-    </div>
-
-    <div class="init">
-      {initiative}
-    </div>
+    {['armorClass', 'healthPoints', 'initiative'].map((key, i) => (
+      <Stat
+        key={name+key+i}
+        value={props[key]}
+        up={() => props.update(key, props[key] + 1)}
+        down={() => props.update(key, props[key] - 1)}
+      />
+    ))}
 
   </div>
 );

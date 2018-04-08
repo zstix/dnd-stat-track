@@ -2,9 +2,7 @@ export default {
 
   next: () => state => {
     let turn = state.turn + 1;
-    if (turn > state.characters.length - 1) {
-      turn = 0;
-    }
+    if (turn > state.characters.length - 1) turn = 0;
     return { turn };
   },
 
@@ -34,6 +32,13 @@ export default {
       characters: [...characters, character],
       showForm: false
     };
-  }
+  },
+
+  update: ({ index, key, value }) => state => ({
+    characters: state.characters.map((character, i) => {
+      if (i === index) character[key] = value;
+      return character;
+    })
+  })
 
 };

@@ -42,10 +42,12 @@ body, html {
   padding: 0;
 }
 
-.character .armor,
-.character .health,
-.character .init {
+.character .stat {
   font-size: 20px;
+}
+
+.character .stat button {
+  margin: 0 5px;
 }
 
 .controls {

@@ -13,7 +13,7 @@ const view = (state, actions) => (
   <div>
     <Controls {...actions} showForm={state.showForm} />
     {state.showForm && <Form create={actions.create} />}
-    <List {...state} />
+    <List {...state} update={actions.update} />
   </div>
 );
 

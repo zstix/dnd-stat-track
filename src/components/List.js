@@ -2,7 +2,7 @@ import { h } from 'hyperapp';
 
 import Character from './Character';
 
-export default ({ characters, turn }) => (
+export default ({ characters, turn, update }) => (
   <div class="list">
 
     <div class="header">
@@ -14,8 +14,10 @@ export default ({ characters, turn }) => (
 
     {characters.map((char, i) => (
       <Character
+        key={char.name+i}
         {...char}
         active={turn === i}
+        update={(key, value) => update({ index: i, key, value })}
       />
     ))}
 
