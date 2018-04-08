@@ -1,19 +1,17 @@
 import { h, app } from 'hyperapp';
 
-const state = {
-  count: 0,
-};
+import state from './state';
 
-const actions = {
-  down: val => state => ({ count: state.count - val }),
-  up: val => state => ({ count: state.count + val })
-};
+const actions = {};
 
 const view = (state, actions) => (
   <div>
-    <h1>{state.count}</h1>
-    <button onclick={() => actions.down(1)}>-</button>
-    <button onclick={() => actions.up(1)}>+</button>
+    {state.characters.map(char => (
+      <div>
+        <b>{char.name}</b><br />
+        <em>{char.race} {char.class}</em>
+      </div>
+    ))}
   </div>
 );
 
