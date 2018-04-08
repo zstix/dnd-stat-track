@@ -7,9 +7,9 @@ export default ({ create }) => (
     <input type="text" class="color" placeholder="Color" />
     <input type="text" class="race" placeholder="Race" />
     <input type="text" class="characterClass" placeholder="Class" />
-    <input type="text" class="armorClass" placeholder="Armor Class" />
-    <input type="text" class="healthPoints" placeholder="Health Points" />
-    <input type="text" class="initiative" placeholder="Initiative" />
+    <input type="number" class="armorClass" placeholder="Armor Class" />
+    <input type="number" class="healthPoints" placeholder="Health Points" />
+    <input type="number" class="initiative" placeholder="Initiative" />
     <br />
     <button onclick={create}>Create</button>
   </div>

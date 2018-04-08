@@ -21,5 +21,9 @@ export default ({ characters, turn, update }) => (
       />
     ))}
 
+    {!characters.length && (
+      <div class="empty">Please Add a Character</div>
+    )}
+
   </div>
 );

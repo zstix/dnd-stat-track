@@ -15,8 +15,8 @@ export default (props) => (
       <Stat
         key={name+key+i}
         value={props[key]}
-        up={() => props.update(key, props[key] + 1)}
-        down={() => props.update(key, props[key] - 1)}
+        up={() => props.update(key, parseInt(props[key], 10) + 1)}
+        down={() => props.update(key, parseInt(props[key]) - 1)}
       />
     ))}
 
