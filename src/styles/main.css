@@ -46,6 +46,10 @@ body, html {
   font-size: 20px;
 }
 
+.character .stat.dead {
+  background-color: lightcoral;
+}
+
 .character .stat button {
   margin: 0 5px;
 }
