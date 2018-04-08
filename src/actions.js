@@ -39,6 +39,11 @@ export default {
       if (i === index) character[key] = value;
       return character;
     })
+  }),
+
+  cleanup: () => state => ({
+    characters: state.characters
+      .filter(character => character.healthPoints > 0)
   })
 
 };
