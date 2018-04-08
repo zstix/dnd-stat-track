@@ -1,0 +1,6 @@
+node_modules/
+*.swp
+.DS_Store
+.cache/
+stat-track*.js
+stat-track*.map
