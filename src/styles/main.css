@@ -1,9 +1,49 @@
 body, html {
-  padding: 0;
-  margin: 0;
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .list {
   border: 3px solid black;
+}
+
+.list .header, .character {
+  align-items: center;
+  border-bottom: 3px solid black;
+  display: flex;
+}
+
+.header {
+  background-color: white;
+}
+
+.character.active {
+  background-color: lightgray;
+}
+
+.character:last-child {
+  border: none;
+}
+
+.character > div, .header > div {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 5px;
+  text-align: center;
+}
+
+.character .info {
+  color: white;
+}
+
+.character .info h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.character .armor,
+.character .health,
+.character .init {
+  font-size: 20px;
 }
