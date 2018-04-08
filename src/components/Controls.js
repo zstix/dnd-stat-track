@@ -1,11 +1,14 @@
 import { h } from 'hyperapp';
 
-export default ({ next, sort }) => (
+export default ({ next, sort, toggle, showForm }) => (
   <div class="controls">
 
-    <button onclick={next}>Next</button>
+    <button onclick={next}>Next Turn</button>
+    <button onclick={sort}>Sort by Initiative</button>
 
-    <button onclick={sort}>Sort</button>
-
+    {!showForm && (
+      <button onclick={toggle}>Add Character</button>
+    )}
+    
   </div>
 );

@@ -2,6 +2,7 @@
 
 export default {
   turn: 0,
+  showForm: false,
   characters: [
     {
       player: 'Zack',

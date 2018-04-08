@@ -12,6 +12,28 @@ export default {
     const characters = [ ...state.characters ];
     characters.sort((a, b) => a.initiative < b.initiative);
     return { characters };
+  },
+
+  toggle: () => state => ({ showForm: !state.showForm }),
+
+  create: () => ({ characters }) => {
+    const inputs = document.querySelectorAll('.form input');
+
+    if ([...inputs].some(input => input.value === '')) {
+      alert('Please fill out form');
+      return;
+    }
+
+    let character = {};
+    inputs.forEach(input => {
+      character[input.className] = input.value;
+      input.value = '';
+    });
+
+    return {
+      characters: [...characters, character],
+      showForm: false
+    };
   }
 
 };
